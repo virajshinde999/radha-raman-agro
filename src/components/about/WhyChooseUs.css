@@ -1,0 +1,135 @@
+.why-choose {
+  background: var(--color-white);
+  overflow: hidden;
+}
+
+.why-choose-heading {
+  max-width: 700px;
+  margin-bottom: 55px;
+}
+
+.why-choose-heading h2 {
+  margin: 0 0 18px;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: var(--color-text);
+}
+
+.why-choose-heading h2 span {
+  display: block;
+  color: var(--color-primary);
+}
+
+.why-choose-heading p {
+  max-width: 600px;
+  margin: 0;
+  color: var(--color-text-light);
+  line-height: 1.75;
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.why-card {
+  position: relative;
+  padding: 28px 24px;
+  min-height: 285px;
+  border: 1px solid var(--color-border);
+  border-radius: 22px;
+  background: var(--color-cream);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(40, 92, 58, 0.2);
+}
+
+.why-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.why-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: var(--color-white);
+  font-size: 1.4rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.why-number {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.12em;
+}
+
+.why-card h3 {
+  margin: 0 0 12px;
+  color: var(--color-text);
+  font-size: 1.15rem;
+}
+
+.why-card p {
+  margin: 0;
+  color: var(--color-text-light);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.why-card-line {
+  width: 32px;
+  height: 2px;
+  margin-top: 25px;
+  background: var(--color-primary);
+  transition: width 0.35s ease;
+}
+
+.why-card:hover .why-card-line {
+  width: 55px;
+}
+
+@media (max-width: 950px) {
+  .why-choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .why-choose-heading {
+    margin-bottom: 35px;
+  }
+
+  .why-choose-heading h2 {
+    font-size: 2.25rem;
+  }
+
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .why-card {
+    min-height: auto;
+    padding: 24px 20px;
+  }
+
+  .why-card-top {
+    margin-bottom: 25px;
+  }
+}

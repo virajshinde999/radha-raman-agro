@@ -1,0 +1,19 @@
+/* Mobile is the default */
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    width: min(100% - 48px, 1200px);
+  }
+
+  .section {
+    padding: 90px 0;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .section {
+    padding: 110px 0;
+  }
+}

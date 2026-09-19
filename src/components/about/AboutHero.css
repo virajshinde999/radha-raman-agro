@@ -1,0 +1,296 @@
+.about-hero {
+  position: relative;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 30%,
+      rgba(79, 125, 92, 0.15),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 65%,
+      rgba(107, 75, 50, 0.09),
+      transparent 30%
+    ),
+    var(--color-cream);
+}
+
+
+/* Decorative Orbs */
+
+.about-hero-orb {
+  position: absolute;
+  border: 1px solid rgba(40, 92, 58, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.about-hero-orb-one {
+  width: 420px;
+  height: 420px;
+  top: -190px;
+  right: -120px;
+
+  animation: heroOrbFloat 9s ease-in-out infinite;
+}
+
+.about-hero-orb-two {
+  width: 280px;
+  height: 280px;
+  bottom: -150px;
+  left: -100px;
+
+  border-color: rgba(107, 75, 50, 0.10);
+
+  animation: heroOrbFloat 11s ease-in-out infinite reverse;
+}
+
+
+/* Content */
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(900px, calc(100% - 40px));
+
+  text-align: center;
+}
+
+
+/* Eyebrow */
+
+.about-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 24px;
+
+  color: var(--color-primary);
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+
+  animation: aboutHeroReveal 0.8s ease both;
+}
+
+.about-hero-eyebrow::before,
+.about-hero-eyebrow::after {
+  content: "";
+
+  width: 32px;
+  height: 1px;
+
+  background: var(--color-primary);
+  opacity: 0.45;
+}
+
+
+/* Heading */
+
+.about-hero h1 {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: clamp(48px, 7vw, 84px);
+  line-height: 0.98;
+  letter-spacing: -4px;
+  font-weight: 700;
+
+  animation: aboutHeroReveal 0.9s 0.1s ease both;
+}
+
+.about-hero h1 span {
+  display: block;
+
+  margin-top: 12px;
+
+  color: var(--color-primary);
+}
+
+
+/* Description */
+
+.about-hero-content > p {
+  max-width: 620px;
+
+  margin: 30px auto 0;
+
+  color: var(--color-text-light);
+
+  font-size: 16px;
+  line-height: 1.8;
+
+  animation: aboutHeroReveal 0.9s 0.2s ease both;
+}
+
+
+/* Highlights */
+
+.about-hero-highlights {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  margin-top: 35px;
+
+  animation: aboutHeroReveal 0.9s 0.3s ease both;
+}
+
+.about-hero-highlights span {
+  padding: 10px 16px;
+
+  border: 1px solid rgba(40, 92, 58, 0.12);
+  border-radius: 100px;
+
+  background: rgba(255, 255, 255, 0.48);
+
+  color: var(--color-text);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  backdrop-filter: blur(8px);
+}
+
+
+.about-hero-scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  width: max-content;
+}
+
+.about-hero-scroll span {
+  display: block;
+  width: 2px;
+  height: 42px;
+  margin-bottom: 12px;
+  background: rgba(40, 92, 58, 0.55);
+}
+
+.about-hero-scroll p {
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+
+  color: var(--color-text-light);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+
+/* Animations */
+
+@keyframes aboutHeroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroOrbFloat {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(14px, -18px);
+  }
+}
+
+@keyframes scrollLine {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scaleY(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .about-hero {
+    min-height: 590px;
+  }
+
+  .about-hero-content {
+    width: calc(100% - 30px);
+  }
+
+  .about-hero-eyebrow {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .about-hero-eyebrow::before,
+  .about-hero-eyebrow::after {
+    width: 20px;
+  }
+
+  .about-hero h1 {
+    font-size: 44px;
+    letter-spacing: -2.2px;
+  }
+
+  .about-hero-content > p {
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .about-hero-highlights {
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 28px;
+  }
+
+  .about-hero-highlights span {
+    padding: 8px 12px;
+    font-size: 9px;
+  }
+
+  .about-hero-orb-one {
+    width: 260px;
+    height: 260px;
+    right: -150px;
+  }
+
+  .about-hero-orb-two {
+    width: 190px;
+    height: 190px;
+    left: -100px;
+  }
+}
