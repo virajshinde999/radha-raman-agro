@@ -86,19 +86,17 @@ function Header() {
       {/* Mobile Navigation */}
       <nav className="mobile-nav">
 
-  <a href="/" onClick={closeMenu}>
-    Home
-  </a>
+          <a href="/" onClick={closeMenu}>
+            Home
+          </a>
 
-  <a href="/#shop" onClick={closeMenu}>
-    Shop Products
-  </a>
+          <a href="/#shop" onClick={closeMenu}>
+            Shop Products
+          </a>
 
-  <a href="/about" onClick={closeMenu}>
-    About Radha Raman Agro
-  </a>
+        <Link to="/About">About </Link>
 
- <Link to="/contact">Contact Us</Link>
+        <Link to="/contact">Contact Us</Link>
 
  
 

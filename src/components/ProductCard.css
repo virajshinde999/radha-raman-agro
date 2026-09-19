@@ -693,3 +693,36 @@
   transform: translateY(0);
 }
 
+/* =========================================================
+   MOBILE PRODUCT CARD FIX
+========================================================= */
+
+@media (max-width: 600px) {
+  .product-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .product-card * {
+    box-sizing: border-box;
+  }
+
+  .product-slider {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .product-card-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .product-card button,
+  .order-btn {
+    max-width: 100%;
+  }
+}
