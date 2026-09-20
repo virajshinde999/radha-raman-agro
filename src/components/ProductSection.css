@@ -232,6 +232,7 @@
 ================================ */
 
 @media (max-width: 600px) {
+
   .products-section {
     padding: 80px 0;
   }
@@ -249,5 +250,11 @@
     margin-top: 15px;
     font-size: 14px;
     line-height: 1.65;
+  }
+
+  /* ONE PRODUCT PER ROW ON MOBILE */
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 }
