@@ -10,6 +10,18 @@ function OurStory() {
             Our Story
           </span>
 
+          <div className="our-story-logo-wrap">
+            <div className="our-story-logo-glow"></div>
+
+            <div className="our-story-logo-glass">
+              <img
+                src="/images/brand/radha-raman-logo.png"
+                alt="Radha Raman Agro"
+                className="our-story-logo"
+              />
+            </div>
+          </div>
+
           <h2>
             Bringing Nature's
             <span>Goodness</span> to Everyday Life

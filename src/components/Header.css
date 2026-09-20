@@ -1,3 +1,111 @@
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-logo-image {
+  width: 48px;
+  height: 48px;
+
+  display: block;
+  object-fit: contain;
+}
+
+.brand-name {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  line-height: 1;
+}
+
+/* Premium Brand Name */
+
+.brand-name strong {
+  color: #1d3524;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 19px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -0.035em;
+
+  text-transform: none;
+}
+
+/* Premium AGRO label */
+
+.brand-name small {
+  display: block;
+
+  margin-top: 6px;
+
+  color: var(--color-primary);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.34em;
+
+  text-transform: uppercase;
+}
+
+
+/* Desktop slightly stronger */
+
+@media (min-width: 901px) {
+
+  .brand-logo-image {
+    width: 52px;
+    height: 52px;
+  }
+
+  .brand-name strong {
+    font-size: 20px;
+  }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .brand-logo {
+    gap: 9px;
+  }
+
+  .brand-logo-image {
+    width: 43px;
+    height: 43px;
+  }
+
+  .brand-name strong {
+    font-size: 16px;
+  }
+
+  .brand-name small {
+    margin-top: 5px;
+    font-size: 7px;
+    letter-spacing: 0.3em;
+  }
+
+}
+
+
+
 .site-header {
   position: sticky;
   top: 0;
@@ -16,6 +124,8 @@
     box-shadow 0.35s ease,
     border-color 0.35s ease;
 }
+
+
 
 .site-header:hover {
   border-color: var(--color-border);

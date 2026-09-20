@@ -30,11 +30,15 @@ function Header() {
     <header className={`site-header ${menuOpen ? "menu-open" : ""}`}>
       <div className="header-container">
 
-        {/* Logo */}
+     {/* Brand */}
         <a href="/" className="brand-logo" onClick={closeMenu}>
-          <span className="brand-icon">🌿</span>
+          <img
+            src="/images/brand/radha-raman-logo.png"
+            alt="Radha Raman Agro"
+            className="brand-logo-image"
+          />
 
-          <span className="brand-text">
+          <span className="brand-name">
             <strong>Radha Raman</strong>
             <small>AGRO</small>
           </span>
