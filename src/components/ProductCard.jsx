@@ -115,9 +115,10 @@ Please confirm my order.`;
             {product.category}
           </span>
 
-          <h3 className="product-name">
-            {product.name}
-          </h3>
+         <h3 className="product-name">
+            {product.name.split(" ")[0]}{" "}
+            <span>{product.name.split(" ").slice(1).join(" ")}</span>
+         </h3>
 
           <p className="product-description">
             {product.description}
